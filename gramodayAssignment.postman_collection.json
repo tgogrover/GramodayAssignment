@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "ae1a2896-1da4-4485-afca-7b172011e5b5",
+		"name": "gramodayAssignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/reports?reportID=c0ca8bda-554c-4260-8a73-63ae28c98cb7",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/reports?reportID=c0ca8bda-554c-4260-8a73-63ae28c98cb7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reports"
+					],
+					"query": [
+						{
+							"key": "reportID",
+							"value": "c0ca8bda-554c-4260-8a73-63ae28c98cb7"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/reports",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"reportDetails\": {\r\n      \"userID\": \"user-7\",\r\n      \"marketID\": \"market-1\",\r\n      \"marketName\": \"Vashi Navi Mumbai\",\r\n      \"marketType\": \"Mandi\",\r\n      \"cmdtyID\": \"cmdty-1\",\r\n      \"cmdtyName\": \"Potato\",\r\n      \"priceUnit\": \"Quintal\",\r\n      \"convFctr\": 100,\r\n      \"price\": 1700\r\n    }\r\n}\r\n\r\n\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/reports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"reports"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/agregateReports",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"reportID\":\"c0ca8bda-554c-4260-8a73-63ae28c98cb7\",\"cmdtyID\":\"VE-42\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/agregateReports",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"agregateReports"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
